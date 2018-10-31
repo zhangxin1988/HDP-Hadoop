@@ -64,6 +64,29 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         <enabled>false</enabled>
       </snapshots>
     </repository>
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>hortonworks.extrepo</id>
+      <name>Hortonworks HDP</name>
+      <url>http://repo.hortonworks.com/content/repositories/releases</url>
+    </repository>
+
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>hortonworks.other</id>
+      <name>Hortonworks Other Dependencies</name>
+      <url>http://repo.hortonworks.com/content/groups/public</url>
+    </repository>
   </repositories>
 
   <licenses>
@@ -244,7 +267,9 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
               <goal>attach-descriptor</goal>
             </goals>
             <configuration>
+<!--
               <generateReports>true</generateReports>
+-->
             </configuration>
           </execution>
         </executions>
